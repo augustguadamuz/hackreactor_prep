@@ -185,3 +185,10 @@ console.log(futureValue(1700,0.047,4,6))
 
 //answer should be ~2250.12
 
+// Write a power function that accepts the parameters base and exponent and returns the result. Replace square and cube with the power function you just wrote. Do not use Math.pow.
+
+function power(base, exponent){
+	for
+}
+
+console.log(power(3,2))
