@@ -26,3 +26,9 @@ function squareNumericValues(object1) {
 
 //squareNumericValues({a: 4, b: 7, c: 2}) // => {a: 16, b: 49, c: 4}
 squareNumericValues({name: "Phuong", age: 25}); // => {name: "Phuong", age: 625}
+
+var AugsObject = {
+	name: name,
+	age: age,
+	ageYouFeel: ageYouFeel
+}

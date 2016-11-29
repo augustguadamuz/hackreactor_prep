@@ -145,21 +145,131 @@ function alternation(array) {
 }
 console.log(alternation([1,2,3,4,5]));
 
+// Warm up 9
+// Write a function that returns a horizontal line of asterisks of a specified length.
+// Don't just write this out to the log -- actually return the string.
+
+// Write a function named line
+// function has one input, an integer
+// output is a horizontal line of asterisks the with a character length of the input number
+
+function line(number) {
+	var astLine = '';
+	var asterisk = '*'
+	for (var i = 0; i < number; i++) {
+		var astLine = astLine.concat(asterisk);
+	}
+	return astLine;
+}
+
+console.log(line(3))
+
+/*Write a function called drawTriangle that returns the following string. Feel free to debug-print using console.log, but make sure that the function actually returns a string. 
+
+Note that in a string, the character for a carriage return (the equivalent of hitting the “Enter” or “Return” key) is “\n”.
+
+#
+##
+###
+####
+#####
+######
+#######*/
 
 
 
 
 
+function triangle(number) {
+	var rightTriangle = '';
+	var pound = '#'
+	for (var i = 0; i < number; i++) {
+		var rightTriangle = rightTriangle.concat(pound);
+		console.log(rightTriangle)
+	}
+	return rightTriangle;
+}
+
+console.log(triangle(6))
 
 
+//
+function triangle(number) {
+	var triElements = [];
+	var pound = '#';
+	var rightTriangle = '';
+	var lineBreak = '\n';
+	for (var i = 0; i < number; i++) {
+		var rightTriangle = rightTriangle.concat(pound)
+		triElements.push(rightTriangle);
+	}
+	return triElements.join("\n");
+}
+
+console.log(triangle(7))
 
 
+function triangle(numOfLayers) {
+    var result = '';
+    var symbol = '#';
+    var layer = '';
+    var lineBreak = '\n';
+    for (var i = 0; i < numOfLayers; i++) {
+        layer += symbol; // add one symbol to last layer
+        //console.log(layer)
+        result += layer + lineBreak; // append an extra line to the result
+        //console.log(result)
+    }
+    return result;
+}
+
+console.log(triangle(6))
+
+/*Create a function called getFirstAnimals that returns an array of all the first animals in the object. 
+Example: [‘bears’,’penguins’,panther’,’flea’]
+
+Also create a function called getLastAnimals that returns an array of all the last animals in the object. 
+Example: [‘otters’,’chickens’...etc]*/
+
+// Write a function named getFirstAnimals
+// input is an array with several properties containing arrays of strings
+// output is the first array element from each property in the object
 
 
+//first animals
+var animals = { 
+mammals:['bears','lions','whales','otters'], 
+birds:['penguins','ducks','swans','chickens'], 
+cats:['panther','mountain lion','leopard','snow tiger'], 
+insects: ['flea','mosquito','beetle','fly','grasshopper']
+}
 
+function getFirstAnimals(animalsObject) {
+	var firstAnimals = [];
+	for (key in animalsObject) {
+		firstAnimals.push(animalsObject[key][0])
+	}
+	return firstAnimals;
+}
 
+console.log(getFirstAnimals(animals));
 
+// last animals
 
+var animals = { 
+mammals:['bears','lions','whales','otters'], 
+birds:['penguins','ducks','swans','chickens'], 
+cats:['panther','mountain lion','leopard','snow tiger'], 
+insects: ['flea','mosquito','beetle','fly','grasshopper']
+}
 
+function getLastAnimals(animalsObject) {
+	var lastAnimals = [];
+	for (key in animalsObject) {
+		lastAnimals.push(animalsObject[key][animalsObject[key].length - 1])
+	}
+	return lastAnimals;
+}
 
+console.log(getLastAnimals(animals));
 
